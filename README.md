@@ -1,46 +1,68 @@
-# Getting Started with Create React App
+# FinShark – Finance and Stock Management Web Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
 
-## Available Scripts
+FinShark is a comprehensive finance and stock management web application. The goal of this project is to provide users with an intuitive platform to manage their personal portfolio, track stock performance, and access detailed financial statements. The application is built using modern web technologies to ensure a seamless user experience.
 
-In the project directory, you can run:
+## Demo
 
-### `npm start`
+You can check out the live demo of the FinShark application [here](#).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technologies Used
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### General Features
 
-### `npm run build`
+- **Personal Portfolio Management:** Create and manage your own stock portfolio.
+- **Add and Delete Stocks:** Easily add or remove stocks from your portfolio.
+- **Real-time Stock Prices:** Access real-time prices for NASDAQ and NYSE stocks.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Financial Statements
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Historic Dividend:** View and analyze the historical dividend data of your stocks using interactive line charts.
+- **Balance Sheet:** Access detailed balance sheet information.
+- **Income Statement:** Review the income statement for your stocks.
+- **Cashflow Statement:** Examine the cashflow statement for comprehensive financial analysis.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### User Interface
 
-### `npm run eject`
+- **Responsive Design:** Optimized for both desktop and mobile devices.
+- **Design Guide:** Includes a design guide for future enhancements and consistent UI/UX.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Project Details
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+FinShark is developed with a focus on providing a robust and user-friendly experience for managing stocks and financial information. Below are some of the detailed aspects of the project:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- **Frontend:** Built using React and TypeScript, ensuring type safety and scalability.
+- **Styling:** Tailwind CSS is used for creating a modern and responsive design.
+- **Charts:** React line charts are used to visualize historic dividend data, providing users with a clear view of their stock performance over time.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Security Related Functionalities
 
-## Learn More
+- **Input Validation:** Ensures all user inputs are validated on both client and server sides.
+- **User Authentication:** Secure authentication mechanisms are implemented for user login and registration.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Best Practices
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project follows the best practices of React with TypeScript. You can read more about these best practices [here](https://dev.to/deepeshk1204/best-practices-of-reactjs-with-typescript-24p4).
+
+## Screenshots
+
+Include some screenshots here to showcase the application's UI and features.
+
+## Conclusion
+
+FinShark is designed to be a powerful tool for both individual investors and financial enthusiasts. It provides a comprehensive set of features to manage and analyze stock portfolios efficiently.
+
+For more information and to contribute to the project, please refer to the project's repository [here](#).
+
+## Contact
+
+If you have any questions or need further assistance, please feel free to contact the project maintainers. If you are a recruiter, you can reach out to Daxil via his personal website: 
+
+<a href="https://daxilprofile.web.app/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">https://daxilprofile.web.app/</a>.
