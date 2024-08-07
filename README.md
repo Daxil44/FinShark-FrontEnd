@@ -49,11 +49,11 @@ FinShark is developed with a focus on providing a robust and user-friendly exper
 
 ## Best Practices
 
-This project follows the best practices of React with TypeScript. You can read more about these best practices [here](https://dev.to/deepeshk1204/best-practices-of-reactjs-with-typescript-24p4).
+This project follows React's best practices with TypeScript. You can read more about these best practices [here](https://dev.to/deepeshk1204/best-practices-of-reactjs-with-typescript-24p4).
 
 ## Screenshots
 
-Include some screenshots here to showcase the application's UI and features.
+
 
 ## Conclusion
 
