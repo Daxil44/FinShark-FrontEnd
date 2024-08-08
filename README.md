@@ -6,7 +6,7 @@ FinShark is a comprehensive finance and stock management web application. The go
 
 ## Demo
 
-You can check out the live demo of the FinShark application [here](#).
+You can check out the live demo of the FinShark application [here](https://finshark-ece62.web.app/).
 
 ## Technologies Used
 
