@@ -1,4 +1,4 @@
-# FinShark – Finance and Stock Management Web Application
+# FinShark – Finance and Stock Management Web Application  [Working on Backend]
 
 ## Introduction
 
