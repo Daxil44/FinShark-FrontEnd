@@ -52,6 +52,33 @@ FinShark is developed with a focus on providing a robust and user-friendly exper
 This project follows React's best practices with TypeScript. You can read more about these best practices [here](https://dev.to/deepeshk1204/best-practices-of-reactjs-with-typescript-24p4).
 
 ## Screenshots
+## Screenshots
+
+Here are some screenshots of the FinShark application:
+
+### Screenshot 1
+![S1](https://github.com/Daxil44/FinShark-FrontEnd/blob/main/SS/S1.PNG)
+
+### Screenshot 2
+![S2](https://github.com/Daxil44/FinShark-FrontEnd/blob/main/SS/S2.PNG)
+
+### Screenshot 3
+![S3](https://github.com/Daxil44/FinShark-FrontEnd/blob/main/SS/S3.PNG)
+
+### Screenshot 4
+![S4](https://github.com/Daxil44/FinShark-FrontEnd/blob/main/SS/S4.PNG)
+
+### Screenshot 5
+![S5](https://github.com/Daxil44/FinShark-FrontEnd/blob/main/SS/S5.PNG)
+
+### Screenshot 6
+![S6](https://github.com/Daxil44/FinShark-FrontEnd/blob/main/SS/S6.PNG)
+
+### Screenshot 7
+![S7](https://github.com/Daxil44/FinShark-FrontEnd/blob/main/SS/S7.PNG)
+
+### Screenshot 8
+![S8](https://github.com/Daxil44/FinShark-FrontEnd/blob/main/SS/S8.PNG)
 
 
 
