@@ -69,16 +69,16 @@ Here are some screenshots of the FinShark application:
 ![S4](https://github.com/Daxil44/FinShark-FrontEnd/blob/main/SS/S4.PNG)
 
 ### Screenshot 5
-![S5](https://github.com/Daxil44/FinShark-FrontEnd/blob/main/SS/S5.PNG)
+![S5](https://github.com/Daxil44/FinShark-FrontEnd/blob/main/SS/s5.PNG)
 
 ### Screenshot 6
-![S6](https://github.com/Daxil44/FinShark-FrontEnd/blob/main/SS/S6.PNG)
+![S6](https://github.com/Daxil44/FinShark-FrontEnd/blob/main/SS/s6.PNG)
 
 ### Screenshot 7
-![S7](https://github.com/Daxil44/FinShark-FrontEnd/blob/main/SS/S7.PNG)
+![S7](https://github.com/Daxil44/FinShark-FrontEnd/blob/main/SS/s7.PNG)
 
 ### Screenshot 8
-![S8](https://github.com/Daxil44/FinShark-FrontEnd/blob/main/SS/S8.PNG)
+![S8](https://github.com/Daxil44/FinShark-FrontEnd/blob/main/SS/s8.PNG)
 
 
 
