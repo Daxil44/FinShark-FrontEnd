@@ -1,4 +1,4 @@
-# FinShark – Finance and Stock Management Web Application  [Working on Backend] URL: https://finshark-ece62.web.app/
+# FinShark – Finance and Stock Management Web Application  [Working on Backend : https://github.com/Daxil44/FinShark-BackEnd] URL: https://finshark-ece62.web.app/
 
 ## Introduction
 
