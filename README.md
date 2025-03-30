@@ -1,4 +1,5 @@
-# FinShark – Finance and Stock Management Web Application  [Working on Backend : https://github.com/Daxil44/FinShark-BackEnd] URL: https://finshark-ece62.web.app/
+# FinShark – Finance and Stock Management Web Application  [Working on Backend : https://github.com/Daxil44/FinShark-BackEnd]   
+## URL: https://finshark-ece62.web.app/
 
 ## Introduction
 
@@ -90,6 +91,6 @@ For more information and to contribute to the project, please refer to the proje
 
 ## Contact
 
-If you have any questions or need further assistance, please feel free to contact the project maintainers. If you are a recruiter, you can reach out to Daxil via his personal website: 
+If you have any questions or need further assistance, please feel free to contact the project maintainers. If you are a recruiter, you can reach out to me via my personal website: 
 
 <a href="https://daxilprofile.web.app/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">https://daxilprofile.web.app/</a>.
