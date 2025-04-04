@@ -14,6 +14,7 @@ You can check out the live demo of the FinShark application [here](https://finsh
 - **React**
 - **TypeScript**
 - **Tailwind CSS**
+  
 
 ## Features
 
