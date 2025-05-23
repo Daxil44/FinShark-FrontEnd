@@ -1,116 +1,131 @@
-import React, { useState } from 'react';
-import logo from './logo.png';
-import { Link } from 'react-router-dom';
-import Modal from './Model';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import logo from "./logo.png";
+import "./Navbar.css";
+import { useAuth } from "../../Context/useAuth";
 
-
-interface Props {}
-
-const Navbar: React.FC<Props> = () => {
-  const [isModalOpen, setModalOpen] = useState(false);
-  const [modalContent, setModalContent] = useState<{ title: string; message: React.ReactNode }>({ title: '', message: '' });
-
-  const handleLoginClick = () => {
-    setModalContent({
-      title: 'Login',
-      message: (
-        <p>
-          Daxil is working on the backend. If you are a friend of Daxil, you must have his contact number. If you are a recruiter, you can contact Daxil on his personal website: {' '}
-          <a href="https://daxilprofile.web.app/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
-            https://daxilprofile.web.app/
-          </a>.<b> We can discuss this during the interview. If you want to check the frontend part, then click on the "Get Started" button on the home page.</b>
-        
-        </p>
-      )
-    });
-    setModalOpen(true);
-  };
-
-  const handleSignupClick = () => {
-    setModalContent({
-      title: 'Signup',
-      message: (
-        <p>
-           Daxil is working on the backend. If you are a friend of Daxil, you must have his contact number. If you are a recruiter, you can contact Daxil on his personal website: {' '}
-          <a href="https://daxilprofile.web.app/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
-            https://daxilprofile.web.app/
-          </a>.<b> We can discuss this during the interview. If you want to check the frontend part, then click on the "Get Started" button on the home page.</b>
-        
-        </p>
-      )
-    });
-    setModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setModalOpen(false);
-  };
+const Navbar = () => {
+  const { isLoggedIn, user, logout } = useAuth();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <>
-      <nav className="relative container mx-auto p-6">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-20">
-            <Link to='/'>
-              <img src={logo} alt="Logo" />
-            </Link>
-            <div className="hidden font-bold lg:flex">
-              <Link to="/search" className="text-black hover:text-darkBlue">
-                Search
-              </Link>
-            </div>
-          </div>
-          <div className="hidden lg:flex items-center space-x-6 text-black">
-            <div className="hover:text-darkBlue cursor-pointer" onClick={handleLoginClick}>Login</div>
-            <div
-              className="px-8 py-3 font-bold rounded text-white bg-lightGreen hover:opacity-70 cursor-pointer"
-              onClick={handleSignupClick}
-            >
-              Signup
-            </div>
-          </div>
+    <nav className="relative container mx-auto p-6">
+      {/* Main Navbar */}
+      <div className="flex items-center justify-between">
+        {/* Left Side: Logo */}
+        <div className="flex items-center flex-shrink-0">
+          <Link to="/">
+            <img src={logo} alt="Logo" className="h-8" />
+          </Link>
         </div>
-      </nav>
-      {isModalOpen && <Modal title={modalContent.title} message={modalContent.message} onClose={closeModal} />}
-    </>
+
+        {/* Center: Search Link (hidden on mobile) */}
+        <div className="hidden lg:flex justify-center flex-1">
+          <Link to="/search" className="text-black hover:text-darkBlue font-bold">
+            Search
+          </Link>
+        </div>
+
+        {/* Right Side: Auth Buttons */}
+        <div className="hidden lg:flex items-center space-x-6">
+          {isLoggedIn() ? (
+            <div className="relative">
+              <button
+                onClick={() => setMenuOpen(!menuOpen)}
+                className="flex items-center space-x-2 hover:text-darkBlue focus:outline-none"
+              >
+                <span>Welcome, {user?.userName ?? "User"}</span>
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M5.23 7.21a.75.75 0 011.06 0L10 10.92l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.24a.75.75 0 01-1.06 0L5.23 8.27a.75.75 0 010-1.06z" />
+                </svg>
+              </button>
+
+              {/* Desktop Logout Dropdown */}
+              {menuOpen && (
+                <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-20">
+                  <button
+                    onClick={logout}
+                    className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    Logout
+                  </button>
+                </div>
+              )}
+            </div>
+          ) : (
+            <>
+              <Link to="/login" className="hover:text-darkBlue">
+                Login
+              </Link>
+              <Link
+                to="/register"
+                className="px-8 py-3 font-bold rounded text-white bg-lightGreen hover:opacity-70"
+              >
+                Signup
+              </Link>
+            </>
+          )}
+        </div>
+
+        {/* Mobile Menu Button */}
+        <div className="lg:hidden">
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="text-gray-700 focus:outline-none"
+          >
+            {/* Hamburger Icon */}
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16">
+              </path>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu Dropdown */}
+      {menuOpen && (
+        <div className="lg:hidden mt-4 bg-white shadow-md rounded-md py-4 space-y-4 px-6">
+          {/* Center Search on mobile dropdown */}
+          <div className="flex justify-center">
+            <Link to="/search" className="text-black hover:text-darkBlue font-bold">
+              Search
+            </Link>
+          </div>
+
+          {isLoggedIn() ? (
+            <>
+              <div className="text-center text-gray-700">Welcome, {user?.userName ?? "User"}</div>
+              <button
+                onClick={logout}
+                className="w-full text-center px-4 py-2 text-sm text-white bg-lightGreen rounded hover:opacity-70"
+              >
+                Logout
+              </button>
+            </>
+          ) : (
+            <>
+              <Link to="/login" className="block text-center hover:text-darkBlue">
+                Login
+              </Link>
+              <Link
+                to="/register"
+                className="block px-8 py-3 font-bold rounded text-white bg-lightGreen text-center hover:opacity-70"
+              >
+                Signup
+              </Link>
+            </>
+          )}
+        </div>
+      )}
+    </nav>
   );
 };
 
 export default Navbar;
-
-
-
-// old code
-// import React from 'react'
-// import logo from './logo.png';
-// import { Link } from 'react-router-dom';
-// interface Props  {}
-
-// const Navbar = (props: Props) => {
-//   return (
-//     <nav className="relative container mx-auto p-6">
-//     <div className="flex items-center justify-between">
-//       <div className="flex items-center space-x-20">
-//         <Link to='/'>
-//         <img src={logo} alt="" /></Link>
-//         <div className="hidden font-bold lg:flex">
-//           <Link to="/search" className="text-black hover:text-darkBlue">
-//             Search
-//           </Link>
-//         </div>
-//       </div>
-//       <div className="hidden lg:flex items-center space-x-6 text-back">
-//         <div className="hover:text-darkBlue">Login</div>
-//         <a
-//           href=""
-//           className="px-8 py-3 font-bold rounded text-white bg-lightGreen hover:opacity-70"
-//         >
-//           Signup
-//         </a>
-//       </div>
-//     </div>
-//   </nav>
-//   )
-// }
-
-// export default Navbar
