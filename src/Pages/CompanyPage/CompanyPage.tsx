@@ -41,11 +41,11 @@ const CompanyPage = (props: Props) => {
          <CompanyDashboard ticker={ticker!}>
             <Tile title="Company Name" subTitle={company.companyName}> </Tile>
             <Tile title="Price" subTitle={"$" + company.price.toString()} />
-            <Tile title="DCF" subTitle={"$" + company.dcf.toString()} />
+            <Tile title="DCF" subTitle={company.dcf ? "$" + company.dcf.toString() : 'N/A'} />
             <Tile title="Sector" subTitle={company.sector} />
             <Tile title="City" subTitle={company.city} />
             <Tile title="CEO" subTitle={company.ceo} />
-            <Tile title="Market Cap" subTitle={company.mktCap ? formatToBillion(company.mktCap) : 'N/A'} />
+            <Tile title="Market Cap" subTitle={company.marketCap ? formatToBillion(company.marketCap) : 'N/A'} />
             <Tile title="Stock Market: " subTitle={company.exchange} />
             <Tile title="Industry: " subTitle={company.industry} />
             <Tile title="Sector" subTitle={company.sector} />

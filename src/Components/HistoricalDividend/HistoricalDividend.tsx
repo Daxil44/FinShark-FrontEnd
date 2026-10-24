@@ -15,7 +15,7 @@ const HistoricalDividend = (props: Props) => {
     const fetchHistoricalDividend = async () => {
       const value = await getHistoricalDividend(ticker);
       setDividend(
-        value?.data.historical.slice(0, 18).sort(function (a, b) {
+        value?.data.slice(0, 18).sort(function (a, b) {
           var c = new Date(a.date);
           var d = new Date(b.date);
           return c.getTime() - d.getTime();
@@ -27,7 +27,7 @@ const HistoricalDividend = (props: Props) => {
   return (
     <>
       {dividend && dividend.length > 0 && dividend !== undefined ? (
-        <SimpleLineChart data={dividend} xAxis="label" dataKey="dividend" />
+        <SimpleLineChart data={dividend} xAxis="date" dataKey="dividend" />
       ) : (
         <h1 className="text-lg text-red-500 ml-3">Company does not have a dividend!</h1>
       )}

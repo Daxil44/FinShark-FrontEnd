@@ -1,8 +1,8 @@
 export interface CompanySearch {
     currency: string;
-    exchangeShortName: string;
+    exchange: string;
     name: string;
-    stockExchange: string;
+    exchangeFullName: string;
     symbol: string;
   }
   
@@ -11,8 +11,8 @@ export interface CompanySearch {
     price: number;
     beta: number;
     volAvg: number;
-    mktCap: number;
-    lastDiv: number;
+    marketCap: number;
+    lastDividend: number;
     range: string;
     changes: number;
     companyName: string;
@@ -316,17 +316,20 @@ export interface CompanySearch {
   
   export interface Dividend {
     date: string;
-    label: string;
     adjDividend: number;
     dividend: number;
     recordDate: string;
     paymentDate: string;
     declarationDate: string;
+    yield: number;
+    frequency: string;
   }
   
-  export interface CompanyCompData {
+  export interface CompanyStockPeer {
     symbol: string;
-    peersList: string[];
+    companyName: string;
+    price: number;
+    mktCap: number;
   }
   
   export interface CompanyTenK {

@@ -26,7 +26,7 @@ const Card: React.FC<Props> = ({
       </Link>
       <p className="text-black">{searchResult.currency}</p>
       <p className="font-bold text-black">
-        {searchResult.exchangeShortName} - {searchResult.stockExchange}
+        {searchResult.exchange} - {searchResult.exchangeFullName}
       </p>
       <AddProtfolio
         onPortfolioCreate={onPortfolioCreate}
